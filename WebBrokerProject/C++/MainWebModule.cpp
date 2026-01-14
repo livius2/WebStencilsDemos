@@ -20,17 +20,19 @@ TComponentClass WebModuleClass = __classid(TMainWebModule);
 __fastcall TEnvironmentSettings::TEnvironmentSettings()
     : System::Classes::TPersistent()
 {
-    FAppVersion = "1.5.2";
+    FAppVersion = "1.6.2";
     FAppName = "WebStencils demo";
     FAppEdition = "WebBroker C++";
     FCompanyName = "Embarcadero Inc.";
     FResource = ""; // Set empty for WebBroker - This is needed to share the same templates between WebBroker and RadServer
-    FIsRadServer = false;
+	FIsRadServer = "False";
 #ifdef _DEBUG
-    FDebugMode = true;
+	FDebugMode = "True";
 #else
-    FDebugMode = false;
+	FDebugMode = "False";
 #endif
+	// Demo mode is not available on C++. Check the Delphi project for more information
+	FDemoMode = "False";
 }
 
 //---------------------------------------------------------------------------

@@ -63,8 +63,9 @@ private:
     System::UnicodeString FAppEdition;
     System::UnicodeString FCompanyName;
     System::UnicodeString FResource;
-    bool FDebugMode;
-    bool FIsRadServer;
+	System::UnicodeString FDebugMode;
+	System::UnicodeString FIsRadServer;
+    System::UnicodeString FDemoMode;
 
 public:
     __fastcall TEnvironmentSettings();
@@ -76,8 +77,9 @@ __published:
     __property System::UnicodeString edition = {read=FAppEdition};
     __property System::UnicodeString company = {read=FCompanyName};
     __property System::UnicodeString resource = {read=FResource};
-    __property bool is_rad_server = {read=FIsRadServer};
-    __property bool debug = {read=FDebugMode};
+	__property System::UnicodeString is_rad_server = {read=FIsRadServer};
+	__property System::UnicodeString debug = {read=FDebugMode};
+	__property System::UnicodeString demo_mode = {read=FDemoMode};
 };
 
 //---------------------------------------------------------------------------
